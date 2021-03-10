@@ -20,9 +20,31 @@ namespace BandApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        Model1Container db;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            db = new Model1Container();
+
+            var query = db.Bands
+                .Select(b => b);
+
+            lbxBands.ItemsSource = query.ToList();
+        }
+
+        private void lbxBands_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Band selectedBand = lbxBands.SelectedItem as Band;
+
+            if(selectedBand != null)
+            {
+                
+            }
         }
     }
 }
