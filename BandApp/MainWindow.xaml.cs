@@ -43,7 +43,11 @@ namespace BandApp
 
             if(selectedBand != null)
             {
-                
+                var query = db.Albums
+                    .Where(a => a.BandId == selectedBand.Id)
+                    .Select(a => a);
+
+                lbxAlbums.ItemsSource = query.ToList();
             }
         }
     }

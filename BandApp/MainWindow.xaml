@@ -6,9 +6,26 @@
         xmlns:local="clr-namespace:BandApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <DataTemplate x:Key="lbxBandTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=BandImage}" Height="100"/>
+                <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="10"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="lbxAlbumTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=AlbumImage}" Height="100"/>
+                <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="10"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
-        <ListBox x:Name="lbxBands" HorizontalAlignment="Left" Height="319" Margin="60,50,0,0" VerticalAlignment="Top" Width="300" DisplayMemberPath="Name" SelectionChanged="lbxBands_SelectionChanged"/>
-        <ListBox x:Name="lbxAlbums" HorizontalAlignment="Right" Height="319" Margin="0,50,60,0" VerticalAlignment="Top" Width="300"/>
+        <ListBox ItemTemplate="{StaticResource lbxBandTemplate}" x:Name="lbxBands" HorizontalAlignment="Left" Height="319" Margin="30,50,0,0" VerticalAlignment="Top" Width="325" SelectionChanged="lbxBands_SelectionChanged"/>
+        <ListBox ItemTemplate="{StaticResource lbxAlbumTemplate}" x:Name="lbxAlbums" HorizontalAlignment="Right" Height="319" Margin="0,50,30,0" VerticalAlignment="Top" Width="375"/>
 
     </Grid>
 </Window>

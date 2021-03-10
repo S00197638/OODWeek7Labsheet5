@@ -133,6 +133,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\blackpink.jpg" />
+    <Resource Include="images\bpinyourarea.jpg" />
+    <Resource Include="images\cherryblossom.png" />
+    <Resource Include="images\nightandday.jpg" />
+    <Resource Include="images\thealbum.png" />
+    <Resource Include="images\thevamps.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
