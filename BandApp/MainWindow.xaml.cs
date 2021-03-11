@@ -18,6 +18,11 @@ namespace BandApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
+    //Link To GitHub Repo
+    //https://github.com/S00197638/OODWeek7Labsheet5
+
     public partial class MainWindow : Window
     {
         Model1Container db;
